@@ -26,6 +26,6 @@ A imagem está disponível no Docker Hub:
 
 ## 📦 Tecnologias
 
-- **Go 1.22**
+- **Go 1.25**
 - **Docker**
 - **Multi-stage build** (otimização de tamanho)
