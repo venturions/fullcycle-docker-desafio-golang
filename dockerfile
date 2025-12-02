@@ -8,10 +8,10 @@ COPY . .
 
 ENV CGO_ENABLED=0 GOOS=linux GOARCH=amd64
 
-RUN go build -ldflags="-s -w" -o fullcycle-docker-desafio-golang hello.go
+RUN go build -ldflags="-s -w" -o fullcycle hello.go
 
 FROM scratch
 
-COPY --from=builder /app/fullcycle-docker-desafio-golang /fullcycle-docker-desafio-golang
+COPY --from=builder /app/fullcycle /fullcycle
 
-ENTRYPOINT ["/fullcycle-docker-desafio-golang"]
+ENTRYPOINT ["/fullcycle"]
